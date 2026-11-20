@@ -1,0 +1,1663 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Midnight Archive | By Rabia Sehar</title>
+
+<meta name="description" content="The Midnight Archive by Rabia Sehar — a creative world of psychological mysteries, original fiction and hidden secrets.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0F1115;
+  --card: #181B22;
+  --card-light: #20232B;
+  --text: #EAEAEA;
+  --muted: #A29D96;
+  --red: #C81D25;
+  --gold: #B99B69;
+  --line: #34343A;
+  --serif: 'Playfair Display', serif;
+  --body: 'DM Sans', sans-serif;
+  --display: 'Cormorant Garamond', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 84%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.section {
+  padding: 95px 0;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 500;
+  margin: 9px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15,17,21,.97);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.nav-inner {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 19px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.brand span {
+  color: var(--red);
+}
+
+.brand-author {
+  display: block;
+  font-family: var(--body);
+  font-size: 8px;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 10px;
+  color: #C5C1BA;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(15,17,21,.98), rgba(15,17,21,.78) 50%, rgba(15,17,21,.2)),
+    url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 100px 0;
+}
+
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.hero-kicker::before {
+  content: "";
+  width: 35px;
+  height: 1px;
+  background: var(--red);
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 1.08;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.hero h1 em {
+  color: #C6A477;
+}
+
+.hero-description {
+  max-width: 510px;
+  color: #C1BDB6;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.hero-signature {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 24px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: .3s;
+}
+
+.button:hover {
+  background: transparent;
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+
+/* INTRO STRIP */
+
+.intro-strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 25px 0;
+}
+
+.strip-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.strip-inner span::before {
+  content: "✦";
+  color: var(--red);
+  margin-right: 10px;
+}
+
+/* FEATURED STORY */
+
+.featured {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.featured-image {
+  height: 460px;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.7);
+  transition: .7s;
+}
+
+.featured-image:hover img {
+  transform: scale(1.06);
+  filter: brightness(.9);
+}
+
+.image-label {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: var(--red);
+  padding: 8px 13px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.featured-text h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.5vw, 55px);
+  line-height: 1.15;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.featured-text p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.story-meta {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 17px;
+}
+
+.text-link {
+  display: inline-block;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+/* ARCHIVE COLLECTION */
+
+.collection {
+  background: #13151A;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.filter {
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: transparent;
+  font-size: 10px;
+  transition: .3s;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: white;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 23px;
+}
+
+.story-card {
+  background: var(--card);
+  border: 1px solid #292C34;
+  overflow: hidden;
+  transition: .35s;
+}
+
+.story-card:hover {
+  transform: translateY(-7px);
+  border-color: #85504D;
+}
+
+.story-card.hide {
+  display: none;
+}
+
+.story-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  filter: brightness(.72);
+  transition: .5s;
+}
+
+.story-card:hover img {
+  filter: brightness(.95);
+  transform: scale(1.035);
+}
+
+.story-card-content {
+  padding: 23px;
+}
+
+.story-tag {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.story-card h3 {
+  font-family: var(--serif);
+  font-size: 23px;
+  line-height: 1.3;
+  margin: 12px 0;
+}
+
+.story-card p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* PERSONAL NOTE */
+
+.personal-note {
+  background: #17191F;
+  border-left: 3px solid var(--red);
+  padding: 30px;
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.personal-note p {
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 23px;
+}
+
+.personal-note strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* INTERACTIVE MYSTERY */
+
+.mystery-section {
+  background:
+    linear-gradient(rgba(15,17,21,.94), rgba(15,17,21,.96)),
+    url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=85") center/cover;
+}
+
+.mystery-box {
+  border: 1px solid #4A3B35;
+  background: rgba(24,27,34,.95);
+  padding: 55px;
+  max-width: 920px;
+  margin: auto;
+  position: relative;
+}
+
+.mystery-box::before,
+.mystery-box::after {
+  content: "✦";
+  position: absolute;
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.mystery-box::before {
+  top: 18px;
+  left: 22px;
+}
+
+.mystery-box::after {
+  bottom: 18px;
+  right: 22px;
+}
+
+.mystery-top {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.mystery-top h2 {
+  font-family: var(--serif);
+  font-size: clamp(35px,5vw,53px);
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.mystery-top p {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.story-text {
+  color: #D1CCC3;
+  font-family: var(--display);
+  font-size: 21px;
+  line-height: 1.85;
+  max-width: 690px;
+  margin: auto;
+}
+
+.story-text p {
+  margin-bottom: 17px;
+}
+
+.story-text .quote {
+  color: #D6B27F;
+  font-style: italic;
+}
+
+.story-text .clue {
+  color: var(--gold);
+  border-bottom: 1px dashed var(--gold);
+  cursor: pointer;
+}
+
+.story-text .clue:hover {
+  color: white;
+}
+
+.choice-area {
+  margin-top: 35px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.choice-title {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 17px;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+}
+
+.choice-btn {
+  background: #22252D;
+  border: 1px solid #45414A;
+  color: #E8E1D6;
+  text-align: left;
+  padding: 15px 17px;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.choice-btn:hover {
+  border-color: var(--red);
+  background: #302127;
+}
+
+.choice-btn span {
+  color: var(--gold);
+  margin-right: 9px;
+}
+
+.story-result {
+  display: none;
+  margin-top: 25px;
+  padding: 25px;
+  background: #101218;
+  border-left: 3px solid var(--red);
+}
+
+.story-result.show {
+  display: block;
+  animation: appear .5s ease;
+}
+
+.story-result h3 {
+  font-family: var(--serif);
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.story-result p {
+  color: #C6C0B7;
+  font-family: var(--display);
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.restart-btn {
+  color: var(--gold);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.clue-note {
+  color: var(--gold);
+  font-size: 11px;
+  min-height: 22px;
+  margin-top: 15px;
+}
+
+/* CHARACTER FILES */
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 23px;
+}
+
+.character {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 27px;
+  transition: .3s;
+}
+
+.character:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.character-number {
+  font-family: var(--display);
+  color: var(--gold);
+  font-size: 40px;
+}
+
+.character h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  margin: 7px 0;
+}
+
+.character p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.character small {
+  display: block;
+  color: var(--red);
+  letter-spacing: 2px;
+  font-size: 9px;
+  margin-top: 17px;
+}
+
+/* ABOUT RABIA */
+
+.creator {
+  background: #17191F;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.creator-layout {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.creator-image {
+  height: 440px;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(.75);
+}
+
+.creator-copy h2 {
+  font-family: var(--serif);
+  font-size: 43px;
+  line-height: 1.2;
+  margin: 12px 0 22px;
+}
+
+.creator-copy p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.creator-signature {
+  font-family: var(--display);
+  color: var(--gold);
+  font-style: italic;
+  font-size: 28px;
+  margin-top: 25px;
+}
+
+.creator-caption {
+  font-size: 9px;
+  color: var(--gold);
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-family: var(--serif);
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.newsletter p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 480px;
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: white;
+  padding: 14px;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--gold);
+}
+
+.newsletter-form button {
+  background: var(--red);
+  border: 1px solid var(--red);
+  color: white;
+  padding: 0 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+#message {
+  color: var(--gold);
+  font-size: 11px;
+  margin-top: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 35px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  font-family: var(--serif);
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+.footer-brand span {
+  color: var(--red);
+}
+
+.footer-inner p {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* ANIMATION */
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+
+  .featured {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .story-grid,
+  .character-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .creator-layout {
+    gap: 35px;
+  }
+}
+
+@media(max-width: 650px) {
+  .container {
+    width: 90%;
+  }
+
+  .nav-inner {
+    min-height: 75px;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #181B22;
+    border-bottom: 1px solid var(--line);
+    padding: 24px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 590px;
+    background-position: 60% center;
+  }
+
+  .hero h1 {
+    font-size: 49px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .featured,
+  .creator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image {
+    height: 300px;
+  }
+
+  .story-grid,
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-card img {
+    height: 245px;
+  }
+
+  .personal-note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mystery-box {
+    padding: 40px 22px;
+  }
+
+  .choices {
+    grid-template-columns: 1fr;
+  }
+
+  .story-text {
+    font-size: 19px;
+  }
+
+  .creator-image {
+    height: 290px;
+  }
+
+  .creator-copy h2 {
+    font-size: 36px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-form button {
+    padding: 14px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .strip-inner {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="container nav-inner">
+
+    <a class="brand" href="#home">
+      THE MIDNIGHT <span>ARCHIVE.</span>
+      <small class="brand-author">AN ORIGINAL CREATIVE PROJECT BY RABIA SEHAR</small>
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home" onclick="closeMenu()">HOME</a>
+      <a href="#collection" onclick="closeMenu()">THE ARCHIVE</a>
+      <a href="#mystery" onclick="closeMenu()">MYSTERY ROOM</a>
+      <a href="#characters" onclick="closeMenu()">CHARACTERS</a>
+      <a href="#creator" onclick="closeMenu()">ABOUT RABIA</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="hero-kicker eyebrow">
+        A DIGITAL ARCHIVE OF DARK FICTION
+      </div>
+
+      <h1>
+        Where Every Shadow Holds a <em>Secret.</em>
+      </h1>
+
+      <p class="hero-description">
+        Enter a world of psychological mysteries, forgotten letters,
+        complicated characters and stories that refuse to reveal
+        everything at once.
+      </p>
+
+      <a href="#collection" class="button">
+        EXPLORE THE ARCHIVE →
+      </a>
+
+      <div class="hero-signature">
+        A LITTLE WORLD OF MYSTERIES, IMAGINED BY RABIA.
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- INTRO STRIP -->
+
+<div class="intro-strip">
+  <div class="container strip-inner">
+    <span>Original Fiction</span>
+    <span>Unsolved Mysteries</span>
+    <span>Character Studies</span>
+    <span>Unexpected Endings</span>
+  </div>
+</div>
+
+<!-- FEATURED STORY -->
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">THE FILE OF THE MONTH</div>
+      <h2>Somewhere Between Truth & Lies</h2>
+      <p>A story waiting to be opened.</p>
+    </div>
+
+    <div class="featured">
+
+      <div class="featured-image">
+        <img
+          src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85"
+          alt="Mysterious forest">
+        <div class="image-label">FILE NO. 001</div>
+      </div>
+
+      <div class="featured-text">
+
+        <div class="eyebrow">AN ORIGINAL MYSTERY</div>
+
+        <h2>The House That Forgot Her Name</h2>
+
+        <div class="story-meta">
+          MYSTERY · PSYCHOLOGICAL FICTION · 8 MIN READ
+        </div>
+
+        <p>
+          A woman returns to her childhood home after twelve years.
+          Everything looks familiar — the staircase, the photographs,
+          the old clock. Everything except the family portrait,
+          where someone has carefully removed her face.
+        </p>
+
+        <p>
+          Some memories disappear. Others are deliberately erased.
+        </p>
+
+        <a href="#mystery" class="text-link">
+          ENTER THE MYSTERY →
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY COLLECTION -->
+
+<section class="section collection" id="collection">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">BROWSE THE COLLECTION</div>
+      <h2>From the Archive</h2>
+      <p>Choose a file. Discover a different kind of mystery.</p>
+    </div>
+
+    <div class="filters">
+      <button class="filter active" onclick="filterStories('all',this)">
+        ALL FILES
+      </button>
+
+      <button class="filter" onclick="filterStories('fiction',this)">
+        SHORT FICTION
+      </button>
+
+      <button class="filter" onclick="filterStories('tropes',this)">
+        STORY TROPES
+      </button>
+
+      <button class="filter" onclick="filterStories('characters',this)">
+        CHARACTER FILES
+      </button>
+    </div>
+
+    <div class="story-grid">
+
+      <article class="story-card" data-type="fiction">
+        <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=85" alt="Old mysterious book">
+
+        <div class="story-card-content">
+          <div class="story-tag">SHORT FICTION · 001</div>
+          <h3>The Last Letter</h3>
+          <p>An envelope arrives ten years too late. Its contents change everything.</p>
+          <a href="#mystery" class="text-link">READ THE FILE →</a>
+        </div>
+      </article>
+
+      <article class="story-card" data-type="tropes">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Misty landscape">
+
+        <div class="story-card-content">
+          <div class="story-tag">STORY TROPES · 002</div>
+          <h3>The Unreliable Narrator</h3>
+          <p>What if the storyteller is the very person you should not trust?</p>
+          <a href="#characters" class="text-link">EXPLORE THE IDEA →</a>
+        </div>
+      </article>
+
+      <article class="story-card" data-type="characters">
+        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=85" alt="Dark woodland">
+
+        <div class="story-card-content">
+          <div class="story-tag">CHARACTER FILES · 003</div>
+          <h3>The Mind of a Detective</h3>
+          <p>Some people see clues. Others see the stories hidden behind them.</p>
+          <a href="#characters" class="text-link">OPEN CHARACTER FILE →</a>
+        </div>
+      </article>
+
+      <article class="story-card" data-type="fiction">
+        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=900&q=85" alt="Vintage writing desk">
+
+        <div class="story-card-content">
+          <div class="story-tag">SHORT FICTION · 004</div>
+          <h3>The Room at the End</h3>
+          <p>A locked room. A missing photograph. And a key no one remembers.</p>
+          <a href="#mystery" class="text-link">ENTER THE ROOM →</a>
+        </div>
+      </article>
+
+      <article class="story-card" data-type="tropes">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85" alt="Foggy landscape">
+
+        <div class="story-card-content">
+          <div class="story-tag">STORY TROPES · 005</div>
+          <h3>The Perfect Disappearance</h3>
+          <p>When someone vanishes, is the biggest clue what they leave behind?</p>
+          <a href="#mystery" class="text-link">READ THE FILE →</a>
+        </div>
+      </article>
+
+      <article class="story-card" data-type="characters">
+        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=85" alt="Old library">
+
+        <div class="story-card-content">
+          <div class="story-tag">CHARACTER FILES · 006</div>
+          <h3>The Beautiful Villain</h3>
+          <p>Understanding the difference between a character's past and choices.</p>
+          <a href="#characters" class="text-link">OPEN CHARACTER FILE →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="personal-note">
+      <p>
+        "Every little detail has a story.
+        Sometimes, all it needs is someone willing to look closer."
+      </p>
+      <div class="eyebrow">A THOUGHT BY RABIA</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INTERACTIVE MYSTERY -->
+
+<section class="section mystery-section" id="mystery">
+  <div class="container">
+
+    <div class="mystery-box">
+
+      <div class="mystery-top">
+        <div class="eyebrow">AN ORIGINAL INTERACTIVE STORY BY RABIA</div>
+        <h2>The Room at 11:11</h2>
+        <p>FILE NO. 011 · READ CAREFULLY · YOUR CHOICES MATTER</p>
+      </div>
+
+      <div class="story-text" id="storyText">
+
+        <p>
+          Rain tapped against the windows of the old Ravenshade
+          mansion. Elena had not visited the place in seven years.
+          Yet tonight, she had received a letter asking her to return.
+        </p>
+
+        <p>
+          The letter contained just one sentence:
+          <span class="quote">
+            "Come before the clock strikes eleven.
+            There is something you forgot."
+          </span>
+        </p>
+
+        <p>
+          At 11:11 PM, a telephone rang in the empty hallway.
+          Elena picked it up. A whisper came through the receiver.
+        </p>
+
+        <p class="quote">
+          "If you're hearing this, someone has already entered the house."
+        </p>
+
+        <p>
+          On the table beside her lay an old
+          <span class="clue" onclick="findClue('key')">brass key</span>
+          and a
+          <span class="clue" onclick="findClue('photo')">photograph</span>
+          with one face scratched out.
+        </p>
+
+      </div>
+
+      <div class="clue-note" id="clueNote">
+        Hint: Click the underlined clues to discover hidden information.
+      </div>
+
+      <div class="choice-area">
+
+        <div class="choice-title">WHAT WILL ELENA DO NEXT?</div>
+
+        <div class="choices" id="choices">
+
+          <button class="choice-btn" onclick="makeChoice('key')">
+            <span>01.</span> Pick up the brass key
+          </button>
+
+          <button class="choice-btn" onclick="makeChoice('photo')">
+            <span>02.</span> Examine the photograph
+          </button>
+
+        </div>
+
+        <div class="story-result" id="storyResult">
+          <h3 id="resultTitle"></h3>
+          <p id="resultText"></p>
+
+          <button class="restart-btn" onclick="restartStory()">
+            ↻ RESTART THE MYSTERY
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARACTER FILES -->
+
+<section class="section" id="characters">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">BEHIND THE STORIES</div>
+      <h2>Character Files</h2>
+      <p>Every mystery begins with someone. Every secret has a keeper.</p>
+    </div>
+
+    <div class="character-grid">
+
+      <div class="character">
+        <div class="character-number">01</div>
+        <div class="story-tag">THE OBSERVER</div>
+        <h3>Elena Vale</h3>
+        <p>
+          A woman with a sharp memory and a past full of missing
+          pieces. She notices details others overlook.
+        </p>
+        <small>FILE STATUS: UNDER INVESTIGATION</small>
+      </div>
+
+      <div class="character">
+        <div class="character-number">02</div>
+        <div class="story-tag">THE UNKNOWN</div>
+        <h3>The Caller</h3>
+        <p>
+          A voice that knows too much. No one knows where the call
+          came from or why it began at 11:11.
+        </p>
+        <small>FILE STATUS: IDENTITY UNKNOWN</small>
+      </div>
+
+      <div class="character">
+        <div class="character-number">03</div>
+        <div class="story-tag">THE KEEPER</div>
+        <h3>Mr. Ashford</h3>
+        <p>
+          The mansion's former caretaker. He claims he remembers
+          everything — except the night Elena left.
+        </p>
+        <small>FILE STATUS: QUESTIONED</small>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE CREATOR -->
+
+<section class="section creator" id="creator">
+  <div class="container creator-layout">
+
+    <div>
+      <img
+        class="creator-image"
+        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85"
+        alt="A writer's desk with notebook and pen">
+    </div>
+
+    <div class="creator-copy">
+
+      <div class="eyebrow">THE MIND BEHIND THE ARCHIVE</div>
+
+      <h2>Every mystery begins with an imagination.</h2>
+
+      <p>
+        Hello, I'm <strong>Rabia Sehar</strong> — a university student,
+        creative thinker and the person behind The Midnight Archive.
+      </p>
+
+      <p>
+        I've always been drawn to psychological thrillers,
+        unexpected plot twists, mysterious characters and fictional
+        worlds that make people question everything.
+      </p>
+
+      <p>
+        I love exploring creative ideas, discovering unusual details
+        and turning little thoughts into something meaningful.
+        Storytelling is one of the ways I express my imagination.
+      </p>
+
+      <p>
+        Alongside creativity, I'm also studying computer science
+        and learning how to build digital projects. I wanted to
+        bring these interests together in one place.
+      </p>
+
+      <p>
+        This archive is my personal creative corner — a place to
+        experiment, imagine, write and create something of my own.
+      </p>
+
+      <div class="creator-signature">
+        With imagination, Rabia.
+      </div>
+
+      <div class="creator-caption">
+        FOUNDER & CREATOR · THE MIDNIGHT ARCHIVE
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+  <div class="container">
+
+    <div class="eyebrow">LETTERS FROM THE ARCHIVE</div>
+
+    <h2>Some secrets are worth sharing.</h2>
+
+    <p>
+      Discover new fictional mysteries, creative ideas and stories.
+    </p>
+
+    <form class="newsletter-form" onsubmit="subscribe(event)">
+
+      <input
+        id="email"
+        type="email"
+        placeholder="Enter your email address..."
+        required>
+
+      <button type="submit">
+        JOIN THE ARCHIVE →
+      </button>
+
+    </form>
+
+    <div id="message"></div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      THE MIDNIGHT <span>ARCHIVE.</span>
+    </div>
+
+    <p>A personal creative project by Rabia Sehar.</p>
+
+    <p>© 2026 The Midnight Archive</p>
+
+  </div>
+</footer>
+
+<script>
+
+/* MOBILE NAVIGATION */
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("open");
+}
+
+function closeMenu() {
+  document.getElementById("navLinks").classList.remove("open");
+}
+
+/* CATEGORY FILTERS */
+
+function filterStories(type, button) {
+
+  document.querySelectorAll(".filter").forEach(item => {
+    item.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  document.querySelectorAll(".story-card").forEach(card => {
+
+    const matches =
+      type === "all" || card.dataset.type === type;
+
+    card.classList.toggle("hide", !matches);
+
+  });
+}
+
+/* INTERACTIVE MYSTERY */
+
+const storyText = document.getElementById("storyText");
+const choices = document.getElementById("choices");
+const result = document.getElementById("storyResult");
+const clueNote = document.getElementById("clueNote");
+
+const firstScene = `
+  <p>
+    Rain tapped against the windows of the old Ravenshade
+    mansion. Elena had not visited the place in seven years.
+    Yet tonight, she had received a letter asking her to return.
+  </p>
+
+  <p>
+    The letter contained just one sentence:
+    <span class="quote">
+      "Come before the clock strikes eleven.
+      There is something you forgot."
+    </span>
+  </p>
+
+  <p>
+    At 11:11 PM, a telephone rang in the empty hallway.
+    Elena picked it up. A whisper came through the receiver.
+  </p>
+
+  <p class="quote">
+    "If you're hearing this, someone has already entered the house."
+  </p>
+
+  <p>
+    On the table beside her lay an old
+    <span class="clue" onclick="findClue('key')">brass key</span>
+    and a
+    <span class="clue" onclick="findClue('photo')">photograph</span>
+    with one face scratched out.
+  </p>
+`;
+
+function findClue(clue) {
+
+  const messages = {
+
+    key: "CLUE FOUND: The brass key has the number 111 engraved on it.",
+
+    photo: "CLUE FOUND: Behind the photograph, someone wrote: 'The third person was never invited.'"
+
+  };
+
+  clueNote.textContent = messages[clue];
+
+}
+
+/* FIRST DECISION */
+
+function makeChoice(choice) {
+
+  if (choice === "key") {
+
+    storyText.innerHTML = `
+      <p>
+        Elena picked up the brass key. It was colder than the
+        metal should have been.
+      </p>
+
+      <p>
+        On its handle were three tiny numbers: 1, 1, 1.
+      </p>
+
+      <p>
+        She remembered the locked study upstairs. Her father
+        had forbidden her from entering it when she was a child.
+      </p>
+
+      <p>
+        As she climbed the staircase, she heard a door close
+        behind her.
+      </p>
+    `;
+
+    choices.innerHTML = `
+      <button class="choice-btn" onclick="finishStory('study')">
+        <span>01.</span> Unlock the upstairs study
+      </button>
+
+      <button class="choice-btn" onclick="finishStory('hide')">
+        <span>02.</span> Hide and listen for footsteps
+      </button>
+    `;
+
+  } else {
+
+    storyText.innerHTML = `
+      <p>
+        Elena turned the photograph over. A name was written
+        on its back: Eleanor Vale.
+      </p>
+
+      <p>
+        But that was not her mother's name. It was her own.
+      </p>
+
+      <p>
+        She looked closer. There were three people in the
+        original photograph, but one had been carefully erased.
+      </p>
+
+      <p>
+        Behind the frame was a folded note:
+        <span class="quote">
+          "You were never the first to return."
+        </span>
+      </p>
+    `;
+
+    choices.innerHTML = `
+      <button class="choice-btn" onclick="finishStory('note')">
+        <span>01.</span> Read the hidden note
+      </button>
+
+      <button class="choice-btn" onclick="finishStory('call')">
+        <span>02.</span> Call the unknown number back
+      </button>
+    `;
+
+  }
+
+  clueNote.textContent =
+    "Your decision has changed the story. Choose carefully.";
+
+}
+
+/* FOUR DIFFERENT ENDINGS */
+
+function finishStory(path) {
+
+  const endings = {
+
+    study: {
+      title: "ENDING I — THE HIDDEN ROOM",
+      text: "The key turned. Inside the study was a desk, an old diary and a fresh cup of tea. Someone had been there recently. On the open diary page was a sentence: 'Elena has finally remembered.' Behind her, the door clicked shut. The mystery has only begun."
+    },
+
+    hide: {
+      title: "ENDING II — THE SECOND FOOTSTEP",
+      text: "Elena hid behind the staircase. The footsteps stopped outside the door. Then came a familiar voice: 'You took your time.' A shadow passed under the door. She recognized the shoes. They belonged to someone who was supposed to be miles away."
+    },
+
+    note: {
+      title: "ENDING III — THE OTHER NAME",
+      text: "The note contained an address and a date. Elena recognized the date: it was the day she had supposedly arrived at the mansion for the first time. But the address belonged to a different house. At the bottom, someone had written: 'Ask who gave you your name.'"
+    },
+
+    call: {
+      title: "ENDING IV — THE CALLER",
+      text: "The number rang once, twice, then connected. Elena heard her own voice on the other end. 'Don't trust the photograph,' it whispered. 'I made sure you would find it.' The line went dead. The clock struck 11:12."
+    }
+
+  };
+
+  document.getElementById("resultTitle").textContent =
+    endings[path].title;
+
+  document.getElementById("resultText").textContent =
+    endings[path].text;
+
+  result.classList.add("show");
+
+  choices.style.display = "none";
+
+  clueNote.textContent =
+    "CASE UPDATE: You have reached one possible ending.";
+
+}
+
+/* RESTART STORY */
+
+function restartStory() {
+
+  storyText.innerHTML = firstScene;
+
+  choices.innerHTML = `
+    <button class="choice-btn" onclick="makeChoice('key')">
+      <span>01.</span> Pick up the brass key
+    </button>
+
+    <button class="choice-btn" onclick="makeChoice('photo')">
+      <span>02.</span> Examine the photograph
+    </button>
+  `;
+
+  choices.style.display = "grid";
+
+  result.classList.remove("show");
+
+  clueNote.textContent =
+    "Hint: Click the underlined clues to discover hidden information.";
+
+  document.getElementById("mystery").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+/* NEWSLETTER DEMO */
+
+function subscribe(event) {
+
+  event.preventDefault();
+
+  const email = document.getElementById("email").value;
+
+  document.getElementById("message").textContent =
+    "Welcome to the Archive, " + email + ". Thank you for joining!";
+
+  document.getElementById("email").value = "";
+
+}
+
+</script>
+
+</body>
+</html>
